@@ -1,0 +1,14 @@
+<h1 class="text text-center">Signup</h1>
+<form (ngSubmit)="onSubmit(f)" #f="ngForm">
+  <div class="form-group">
+    <label for="email">Email</label>
+    <input type="text" id="email" class="form-control" name="email" ngModel>
+  </div>
+  <div class="form-group">
+    <label for="password">Password</label>
+    <input [type]="showPassword? 'text': 'password'" id="password" class="form-control" name="password" ngModel>
+    <span><button type="button" class="btn" (click)="toggleShowPassword()">Toggle password ({{showPassword? 'Shown': 'Hidden'}})</button></span>
+
+  </div>
+  <button class="btn btn-success" type="submit">Signup</button>
+</form>
